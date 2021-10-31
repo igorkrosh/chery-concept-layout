@@ -50,7 +50,13 @@ button, a
     font-family: 'Exo 2', sans-serif;
 }
 
-section.first-scroll:after
+.btn.white
+{
+    background: #fff;
+    color: #000;
+}
+
+section.first-scroll .watermark
 {
     content: 'TIGGO 8PRO';
     position: absolute;
@@ -66,17 +72,15 @@ section.first-scroll:after
     letter-spacing: 20px;
     color: #fff;
     opacity: 0.5;
+    pointer-events: none;
 }
 
 section.first-scroll 
 {
-    background: url(../images/bg/60535de257d2755dc68d5a21.jpg);
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
     position: relative;
     display: flex;
     align-items: center;
+    flex-direction: column;
 
     .wrapper
     {
@@ -84,6 +88,24 @@ section.first-scroll
         height: 100%;
         display: flex;
         align-items: center;
+
+        .item
+        {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+
+            .btn-wrapper
+            {
+                .btn.white
+                {
+                    margin-left: 15px;
+                }
+            }
+        }
 
         .container
         {
@@ -122,6 +144,60 @@ section.first-scroll
             }
         }
     }
+
+    .navs
+    {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px;
+
+        button
+        {
+            width: 70px;
+            height: 50px;
+            font-size: 0;
+            position: relative;
+            border: none;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.5);
+            transition: 0.5s;
+        }
+
+        button:hover
+        {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        button:after
+        {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            width: 32px;
+            height: 32px;
+        }
+
+        button.owl-prev:after
+        {
+            background: url(../images/icons/left-arrow.png);
+        }
+
+        button.owl-next:after
+        {
+            background: url(../images/icons/right-arrow.png);
+        }
+
+    }
     
 }
 
@@ -132,10 +208,12 @@ section.first-scroll
     left: 0;
     width: 100%;
     padding: 15px 25px;
-    margin-top: 25px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    z-index: 100;
+    background: rgb(35,31,32);
+    background: linear-gradient(180deg, rgba(35,31,32,0.7) 0%, rgba(255,255,255,0) 90%);
 
     .logo img
     {
@@ -153,7 +231,27 @@ section.first-scroll
 
     .menu a
     {
-        padding: 0 25px;
+        padding: 10px 5px;
+        margin: 0 20px;
+        position: relative;
+    }
+
+    .menu a:after
+    {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: 0%;
+        transition: 0.3s;
+        height: 2px;
+        background: #ed1d24;
+    }
+
+    .menu a:hover:after
+    {
+        width: 100%;
     }
 
     .search-panel

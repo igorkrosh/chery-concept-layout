@@ -4,6 +4,8 @@ function Core()
 {
     SetTabSwitcher();
     SetModal();
+
+    InitOwl();
 }
 
 function SetTabSwitcher()
@@ -95,4 +97,13 @@ function HideModal(modalId)
         $(modalId + ' .modal__dialog').removeClass('fadeOutDownBig');
         $('.modal__backdrop').remove();
     });
+}
+
+function InitOwl()
+{
+    $('section.first-scroll .slider').owlCarousel({
+        items: 1,
+        dots: false,
+        navContainer: $('section.first-scroll .navs')
+    })
 }
