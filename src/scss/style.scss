@@ -503,4 +503,63 @@ section.callback
     }
 }
 
+section.service
+{
+    position: relative;
+
+    .wrapper
+    {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .item
+        {
+            width: 340px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            margin: 25px;
+            padding: 25px;
+            border: 1px solid #bebbbf;
+            transition: 0.5s;
+
+            .icon
+            {
+                margin-bottom: 25px;
+            }
+
+            span
+            {
+                font-size: 18px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+
+        .item:hover
+        {
+            border-color: #ed1d24;
+        }
+    }
+
+    .watermark
+    {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 250px;
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: 30px;
+        color: #ed1d24;
+        z-index: -1;
+        opacity: 0.05;
+    }
+}
+
+
+
 @import 'responce';
