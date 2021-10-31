@@ -56,6 +56,11 @@ button, a
     color: #000;
 }
 
+section 
+{
+    padding: 45px 0;
+}
+
 section.first-scroll .watermark
 {
     content: 'TIGGO 8PRO';
@@ -75,12 +80,59 @@ section.first-scroll .watermark
     pointer-events: none;
 }
 
+.navs
+{
+    
+
+    button
+    {
+        width: 70px;
+        height: 50px;
+        font-size: 0;
+        position: relative;
+        border: none;
+        border-radius: 5px;
+        background: rgba(0, 0, 0, 0.5);
+        transition: 0.5s;
+    }
+
+    button:hover
+    {
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    button:after
+    {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        width: 32px;
+        height: 32px;
+    }
+
+    button.owl-prev:after
+    {
+        background: url(../images/icons/left-arrow.png);
+    }
+
+    button.owl-next:after
+    {
+        background: url(../images/icons/right-arrow.png);
+    }
+
+}
+
 section.first-scroll 
 {
     position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 0;
 
     .wrapper
     {
@@ -156,47 +208,6 @@ section.first-scroll
         align-items: center;
         justify-content: space-between;
         padding: 25px;
-
-        button
-        {
-            width: 70px;
-            height: 50px;
-            font-size: 0;
-            position: relative;
-            border: none;
-            border-radius: 5px;
-            background: rgba(0, 0, 0, 0.5);
-            transition: 0.5s;
-        }
-
-        button:hover
-        {
-            background: rgba(0, 0, 0, 0.8);
-        }
-
-        button:after
-        {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            margin: auto;
-            width: 32px;
-            height: 32px;
-        }
-
-        button.owl-prev:after
-        {
-            background: url(../images/icons/left-arrow.png);
-        }
-
-        button.owl-next:after
-        {
-            background: url(../images/icons/right-arrow.png);
-        }
-
     }
     
 }
@@ -275,10 +286,160 @@ section.first-scroll
             color: #fff;
         }
     }
-
-    
-
 }
 
+.title
+{
+    display: flex;
+    flex-direction: column;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-top: 0;
+    letter-spacing: 3px;
+    position: relative;
+
+    span
+    {
+        color: #ed1d24;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 3px;
+    }
+}
+
+.title:after
+{
+    content: '';
+    height: 1px;
+    width: 100vw;
+    right: calc(100% + 25px);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #bebbbf;
+    position: absolute;
+}
+
+section.lineup
+{
+    padding-top: 90px;
+
+    .title-wrapper
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+
+        .title
+        {
+            margin: 0;
+        }
+
+        .navs
+        {
+            .owl-next
+            {
+                margin-left: 15px;
+            }
+
+            button
+            {
+                background: none;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+            }
+
+            button:hover
+            {
+                border: 1px solid rgba(0, 0, 0, 0.5);
+            }
+
+            button:after
+            {
+                filter: invert(100%);
+            }
+        }
+    }
+
+    .slider
+    {
+        padding: 40px 0;
+        h3
+        {
+            display: flex;
+            flex-direction: column;
+            font-size: 40px;
+            text-transform: uppercase;
+            margin-top: 0;
+            letter-spacing: 3px;
+            margin: 0;
+
+            span
+            {
+                color: #ed1d24;
+                font-size: 13px;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 3px;
+            }
+        }
+
+        .item
+        {
+            position: relative;
+
+            .watermark
+            {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                z-index: -1;
+                display: flex;
+                align-items: center;
+                padding-right: 40px;
+                font-size: 250px;
+                font-weight: 800;
+                letter-spacing: 20px;
+                opacity: 0.05;
+            }
+
+            .container
+            {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+            .image-col
+            {
+                width: 65%;
+
+                img
+                {
+                    width: 100%;
+                }
+            }
+
+            .col
+            {
+                width: 35%;
+                padding: 20px;
+
+                p
+                {
+                    color: grey;
+                    line-height: 25px;
+                    margin-bottom: 30px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+}
 
 @import 'responce';

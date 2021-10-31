@@ -106,4 +106,11 @@ function InitOwl()
         dots: false,
         navContainer: $('section.first-scroll .navs')
     })
+
+    $('section.lineup .slider').owlCarousel({
+        items: 1,
+        dots: false,
+        navContainer: $('section.lineup .navs'),
+        nav: true
+    })
 }
