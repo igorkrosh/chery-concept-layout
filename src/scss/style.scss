@@ -1,0 +1,186 @@
+body
+{
+    margin: 0;
+    color: #000;
+    background: #fff;
+    //font-family: 'Roboto', sans-serif;
+    font-family: 'Exo 2', sans-serif;
+}
+
+body.lock
+{
+    overflow: hidden;
+}
+
+*, ::after, ::before 
+{
+    box-sizing: border-box;
+}
+
+a
+{
+    color: inherit;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+button, input, select
+{
+    outline: none;
+}
+
+button, a
+{
+    cursor: pointer;
+}
+
+.btn
+{
+    height: 55px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    background: #ed1d24;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    padding: 0 15px;
+    min-width: 200px;
+    font-family: 'Exo 2', sans-serif;
+}
+
+section.first-scroll:after
+{
+    content: 'TIGGO 8PRO';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    font-size: 125px;
+    font-weight: 900;
+    letter-spacing: 20px;
+    color: #fff;
+    opacity: 0.5;
+}
+
+section.first-scroll 
+{
+    background: url(../images/bg/60535de257d2755dc68d5a21.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .wrapper
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        .container
+        {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            color: #fff;
+
+            .col
+            {
+                padding: 45px;
+                background: rgba(0, 0, 0, 0.7);
+                border-radius: 3px;
+            }
+
+            h1
+            {
+                font-size: 70px;
+                font-weight: 300;
+                margin: 0;
+            }
+
+            span
+            {
+                letter-spacing: 10px;
+                color: #ed1d24;
+                font-size: 14px;
+                font-weight: 700;
+            }
+
+            p
+            {
+                margin-top: 25px;
+                margin-bottom: 45px;
+                font-size: 18px;
+            }
+        }
+    }
+    
+}
+
+.navbar
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 25px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .logo img
+    {
+        width: 80px;
+    }
+
+    .menu 
+    {
+        display: flex;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: 800;
+    }
+
+    .menu a
+    {
+        padding: 0 25px;
+    }
+
+    .search-panel
+    {
+        input
+        {
+            text-align: right;
+            height: 40px;
+            font-size: 15px;
+            background: none;
+            border: none;
+            border-bottom: 1px solid #ed1d24;
+            color: #fff;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        input::placeholder
+        {
+            color: #fff;
+        }
+    }
+
+    
+
+}
+
+
+@import 'responce';

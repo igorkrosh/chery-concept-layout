@@ -1,0 +1,38 @@
+include pug/mixins.pug
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        include pug/head.pug
+    body
+        section.first-scroll 
+            .navbar
+                .logo
+                    img(src="assets/images/logo.png", alt="")
+                .menu
+                    a(href="") Главная 
+                    a(href="") Модельный ряд
+                    a(href="") Специально для Вас 
+                    a(href="") Акции 
+                    a(href="") Сервис 
+                    a(href="") Услуги 
+                    a(href="") О компании 
+                .search-panel
+                    input(type="text" placeholder="Поиск")
+                button.btn.callback Обратная связь
+            .wrapper
+                .container
+                    .col
+                        span NEW CITY ELITE
+                        h1 <b>TIGGO 8</b>PRO
+                        p ОТ 1 869 900 ₽ | РАССРОЧКА ОТ 0%*
+                        button.btn Пройти тейст драйв
+
+        .container
+
+
+        include pug/scripts.pug

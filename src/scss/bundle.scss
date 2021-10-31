@@ -1,0 +1,16 @@
+@mixin font($fontName, $fileName, $weight, $style) 
+{
+    @font-face {
+        font-family: $fontName;
+        font-display: swap;
+        src: url("../fonts/#{$fileName}.woff") format("woff"), url("../fonts/#{$fileName}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+@import 'fonts';
+@import 'core';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800&display=swap');
+//@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
