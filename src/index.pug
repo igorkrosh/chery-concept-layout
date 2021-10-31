@@ -77,7 +77,26 @@ html(lang="ru")
                             p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit aliquam ipsam omnis eius neque voluptatum nobis saepe harum. Dolores nisi quas officia vel a consectetur quo, necessitatibus perspiciatis magni accusantium.
                             button.btn Подробнее
                     .watermark TIGGO 4
-                    
+        section.callback
+            .container
+                .form-wrapper
+                    h2.title
+                        span callback
+                        |Оставьте заявку
+                    .input-wrapper
+                        label Выберите модель
+                        select(name="model")
+                            option(value="") TIGGO 8 Pro  
+                            option(value="") TIGGO 4  
+                    .input-wrapper
+                        label Ваше имя
+                        input(type="text")
+                    .input-wrapper
+                        label Ваш телефон
+                        input(type="text")
+                    .input-wrapper
+                        label Коментарий
+                        textarea(name="", cols="30", rows="10") 
 
 
         include pug/scripts.pug

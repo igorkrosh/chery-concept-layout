@@ -439,7 +439,68 @@ section.lineup
             }
         }
     }
+}
 
+section.callback
+{
+    background: url(../images/bg/P90304528_highRes_nuerburgring-ger-12t.jpg);
+    background-size: cover;
+    background-position: center;
+    background-position-y: 80%;
+
+    .container
+    {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .title:after
+        {
+            content: none;
+        }
+    }
+
+    .form-wrapper
+    {
+        background: #fff;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 3px;
+
+        .input-wrapper
+        {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 25px;
+
+            label
+            {
+                margin-bottom: 10px;
+                font-size: 20px;
+                font-weight: 400;
+            }
+
+            select, input
+            {
+                height: 45px;
+                padding: 0 15px;
+                font-family: 'Exo 2', sans-serif;
+                font-size: 16px;
+                border: none;
+            }
+
+            textarea
+            {
+                border: none;
+            }
+
+            select, input, textarea
+            {
+                border-bottom: 2px solid #ed1d24;
+            }
+        }
+    }
 }
 
 @import 'responce';
